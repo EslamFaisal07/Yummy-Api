@@ -183,6 +183,11 @@ function displaySearch(){
 document.getElementById("search").addEventListener("click",function(event){
     event.preventDefault(); 
 displaySearch();
+    var leftNavWidth = $(".leftNav").innerWidth();
+
+$("#sideBar").animate({ left: `-${leftNavWidth}px` }, 400);
+$("#close").addClass("d-none"); 
+$("#bar").removeClass("d-none");
 })
 
 async function searchByName(name) {
@@ -325,11 +330,18 @@ function displayCategories(result) {
         `;
     }
     document.getElementById("rowData").innerHTML = category;
+    searchContainer.innerHTML=""
+
 }
 
 document.getElementById("Categories").addEventListener("click", function(event) {
     event.preventDefault();
     getCategories();
+        var leftNavWidth = $(".leftNav").innerWidth();
+
+    $("#sideBar").animate({ left: `-${leftNavWidth}px` }, 400);
+$("#close").addClass("d-none"); 
+$("#bar").removeClass("d-none");
 });
 
 
@@ -461,12 +473,18 @@ function displayAreas(result) {
         `;
     }
     document.getElementById("rowData").innerHTML = area;
+    searchContainer.innerHTML=""
+
 }
 
 
 document.getElementById("area").addEventListener("click",function(event){
     event.preventDefault();
     getArea();
+        var leftNavWidth = $(".leftNav").innerWidth();
+    $("#sideBar").animate({ left: `-${leftNavWidth}px` }, 400);
+$("#close").addClass("d-none"); 
+$("#bar").removeClass("d-none");
 })
 
 
@@ -552,12 +570,19 @@ function displayIngredients(result) {
         `;
     }
     document.getElementById("rowData").innerHTML = ingred;
+    searchContainer.innerHTML=""
+
 }
 
 
 document.getElementById("Ingredients").addEventListener("click",function(event){
     event.preventDefault();
     getIngredients()
+       var leftNavWidth = $(".leftNav").innerWidth();
+
+    $("#sideBar").animate({ left: `-${leftNavWidth}px` }, 400);
+$("#close").addClass("d-none"); 
+$("#bar").removeClass("d-none");
 })
 
 
@@ -616,6 +641,10 @@ function displayIngredientsMeals(result){
 document.getElementById("contact").addEventListener("click", function(event) {
         event.preventDefault();
         displayContact();
+          var leftNavWidth = $(".leftNav").innerWidth();
+        $("#sideBar").animate({ left: `-${leftNavWidth}px` }, 400);
+$("#close").addClass("d-none"); 
+$("#bar").removeClass("d-none");
 
 })
 
