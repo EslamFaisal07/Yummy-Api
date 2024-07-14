@@ -190,7 +190,7 @@ async function searchByName(name) {
         document.getElementById("spinner").classList.remove("d-none");
 
         if (!name) {
-            document.getElementById("searchContainer").innerHTML = ''; 
+            document.getElementById("rowData").innerHTML = ''; 
         }
 
         let api = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`);
@@ -244,7 +244,7 @@ function displaySearchName(data) {
 
        
         if (!letter) {
-            document.getElementById("searchContainer").innerHTML = ''; 
+            document.getElementById("rowData").innerHTML = ''; 
             return;
         }
 
