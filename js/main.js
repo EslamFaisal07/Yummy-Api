@@ -78,7 +78,6 @@ function displayHome(data) {
 
 
 `;
-// console.log(data.meals[i].idMeal);
   }
   document.getElementById("rowData").innerHTML = homeData;
 }
@@ -112,7 +111,7 @@ async function getDetails(id){
 }
 
 function displayDetails(data){
-    // let searchContainer = document.getElementById("searchContainer")
+   
 
 
 let ingredients = ``
@@ -154,7 +153,7 @@ let box =``
     searchContainer.innerHTML=""
 
 
-// searchContainer.classList.add("d-none")
+
 }
 
 
@@ -258,7 +257,7 @@ function displaySearchName(data) {
         let data = await api.json();
         console.log(data);
         displayFirstLetter(data);
-        // displayHome(data)
+        
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -283,13 +282,7 @@ function displayFirstLetter(data) {
         `;
     }
     document.getElementById("rowData").innerHTML = searchName;
-    // searchContainer.innerHTML=""
-    // displaySearch()
-
-// rowData.classList.add("d-none")
-
-    
-//    rowData.innerHTML=""
+  
 
 }
 
@@ -386,11 +379,11 @@ async function displayMealsDetails(mealId) {
         let api = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
         let result = await api.json();
         
-        let meal = result.meals[0]; // Since lookup returns an array with a single meal object
+        let meal = result.meals[0]; 
         
         let ingredients = '';
         
-        // Loop to gather ingredients and measures
+        
         for (let i = 1; i <= 20; i++) {
             let ingredient = meal[`strIngredient${i}`];
             let measure = meal[`strMeasure${i}`];
@@ -760,290 +753,6 @@ function handleSubmit(event) {
         document.getElementById('submitBtn').disabled = true;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.getElementById("contact").addEventListener("click", function(event) {
-//     event.preventDefault();
-//     displayContact();
-
-//     const nameInput = document.getElementById("nameInput");
-//     const emailInput = document.getElementById("emailInput");
-//     const phoneInput = document.getElementById("phoneInput");
-//     const ageInput = document.getElementById("ageInput");
-//     const passInput = document.getElementById("passInput");
-//     const rePassInput = document.getElementById("rePassInput");
-//     const submitBtn = document.getElementById("submit");
-
-//     const nameAlert = document.getElementById("nameAlert");
-//     const mailAlert = document.getElementById("mailAlert");
-//     const phoneAlert = document.getElementById("phoneAlert");
-//     const ageAlert = document.getElementById("ageAlert");
-//     const passAlert = document.getElementById("passAlert");
-//     const rePassAlert = document.getElementById("rePassAlert");
-
-//     if (
-//         validateName() &&
-//         validateEmail() &&
-//         validatePhone() &&
-//         validateAge() &&
-//         validatePass()
-//     ) {
-//         submitBtn.removeAttribute("disabled");
-//         console.log("ok");
-//     } else {
-//         submitBtn.setAttribute("disabled", "true");
-//         console.log("Not ok");
-
-//     }
-// });
-
-
-
-// function displayContact() {
-//     const rowData = document.getElementById("rowData");
-
-//     rowData.innerHTML = `
-//         <div class="col-md-6">
-//             <input oninput=" validateName()" type="text" class="w-100 form-control bg-transparent text-white" placeholder="Enter Your Name" id="nameInput">
-//             <p class="alert alert-danger text-center d-none" id="nameAlert">Special characters and numbers not allowed</p>
-//         </div>
-//         <div class="col-md-6">
-//             <input oninput="validateEmail()" type="email" class="w-100 form-control bg-transparent text-white" placeholder="Enter Your Email" id="emailInput">
-//             <p class="alert alert-danger text-center d-none" id="mailAlert">Email not valid *exemple@yyy.zzz</p>
-//         </div>
-//         <div class="col-md-6">
-//             <input oninput="validatePhone()" type="tel" class="w-100 form-control bg-transparent text-white" placeholder="Enter Your Phone" id="phoneInput">
-//             <p class="alert alert-danger text-center d-none" id="phoneAlert">Enter valid Phone Number</p>
-//         </div>
-//         <div class="col-md-6">
-//             <input oninput="validateAge()" type="text" class="w-100 form-control bg-transparent text-white" placeholder="Enter Your Age" id="ageInput">
-//             <p class="alert alert-danger text-center d-none" id="ageAlert">Enter valid age</p>
-//         </div>
-//         <div class="col-md-6">
-//             <input oninput="validatePass()" type="password" class="w-100 form-control bg-transparent text-white" placeholder="Enter Your Password" id="passInput">
-//             <p class="alert alert-danger text-center d-none" id="passAlert">Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
-//         </div>
-//         <div class="col-md-6">
-//             <input oninput="validateRePass()" type="password" class="w-100 form-control bg-transparent text-white" placeholder="RePassword" id="rePassInput">
-//             <p class="alert alert-danger text-center d-none" id="rePassAlert">Enter valid repassword</p>
-//         </div>
-//         <button class="btn btn-outline-danger mx-auto" id="submit">submit</button>
-//     `;
-// }
-
-// function validateName() {
-//     let text = nameInput.value;
-//     let regex = /^[a-zA-Z ]+$/;
-//     let nameAlert = document.getElementById('nameAlert');
-
-//     if (regex.test(text)) {
-//         nameInput.classList.add('is-valid');
-//         nameInput.classList.remove('is-invalid');
-//         nameAlert.classList.add('d-none');
-//         return true;
-//     } else {
-//         nameInput.classList.add('is-invalid');
-//         nameInput.classList.remove('is-valid');
-//         nameAlert.classList.remove('d-none');
-//         return false;
-//     }
-// }
-
-// function validateEmail() {
-//     let text = emailInput.value;
-//     let regex = /^[a-zA-Z ]+$/;
-
-//     // let regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-//     let mailAlert = document.getElementById('mailAlert');
-
-//     if (regex.test(text)) {
-//         emailInput.classList.add('is-valid');
-//         emailInput.classList.remove('is-invalid');
-//         mailAlert.classList.add('d-none');
-//         return true;
-//     } else {
-//         emailInput.classList.add('is-invalid');
-//         emailInput.classList.remove('is-valid');
-//         mailAlert.classList.remove('d-none');
-//         return false;
-//     }
-// }
-
-// function validatePhone() {
-//     let text = phoneInput.value;
-//     // let regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-//     let regex = /^[a-zA-Z ]+$/;
-
-//     let phoneAlert = document.getElementById('phoneAlert');
-
-//     if (regex.test(text)) {
-//         phoneInput.classList.add('is-valid');
-//         phoneInput.classList.remove('is-invalid');
-//         phoneAlert.classList.add('d-none');
-//         return true;
-//     } else {
-//         phoneInput.classList.add('is-invalid');
-//         phoneInput.classList.remove('is-valid');
-//         phoneAlert.classList.remove('d-none');
-//         return false;
-//     }
-// }
-
-// function validateAge() {
-//     let text = ageInput.value;
-//     // let regex = /^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$/;
-//     let regex = /^[a-zA-Z ]+$/;
-
-//     let ageAlert = document.getElementById('ageAlert');
-
-//     if (regex.test(text)) {
-//         ageInput.classList.add('is-valid');
-//         ageInput.classList.remove('is-invalid');
-//         ageAlert.classList.add('d-none');
-//         return true;
-//     } else {
-//         ageInput.classList.add('is-invalid');
-//         ageInput.classList.remove('is-valid');
-//         ageAlert.classList.remove('d-none');
-//         return false;
-//     }
-// }
-
-// function validatePass() {
-//     let text = passInput.value;
-//     // let regex = /^(?=.*[A-Z])(?=.*[\W_])(?=.*[0-9]).{8,}$/;
-//     let regex = /^[a-zA-Z ]+$/;
-
-//     let passAlert = document.getElementById('passAlert');
-
-//     if (regex.test(text)) {
-//         passInput.classList.add('is-valid');
-//         passInput.classList.remove('is-invalid');
-//         passAlert.classList.add('d-none');
-//         return true;
-//     } else {
-//         passInput.classList.add('is-invalid');
-//         passInput.classList.remove('is-valid');
-//         passAlert.classList.remove('d-none');
-//         return false;
-//     }
-// }
-
-// function validateRePass() {
-//     let passValue = passInput.value;
-//     let rePassValue = rePassInput.value;
-//     let rePassAlert = document.getElementById('rePassAlert');
-
-//     if (passValue === rePassValue) {
-//         rePassInput.classList.add('is-valid');
-//         rePassInput.classList.remove('is-invalid');
-//         rePassAlert.classList.add('d-none');
-//         return true;
-//     } else {
-//         rePassInput.classList.add('is-invalid');
-//         rePassInput.classList.remove('is-valid');
-//         rePassAlert.classList.remove('d-none');
-//         return false;
-//     }
-// }
-
-
-
-
-
-
-
-
 
 
 //............................................End Contact.....................................................

@@ -23,7 +23,7 @@ transition: all 0.8s;
   top: 0;
   left: 0;
   bottom: 0;
-  /* transition:  left 0.5s ease; */
+  
   
 }
 .rightNav{
@@ -32,7 +32,7 @@ transition: all 0.8s;
 .leftNav{
   padding-left: 30px;
   padding-right: 30px;
-  /* transition: left 0.5s ease; */
+
  
 }
 .left-footer{
