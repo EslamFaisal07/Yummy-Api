@@ -209,7 +209,8 @@ async function searchByName(name) {
         displaySearchName(data);
 
     } catch (error) {
-        console.error('Error fetching data:', error);
+                rowData.innerHTML="<h1 class='text-danger fw-bold'>Name is Invalid</h1>"
+
        
     }
     finally {
@@ -264,7 +265,8 @@ function displaySearchName(data) {
         displayFirstLetter(data);
         
     } catch (error) {
-        console.error('Error fetching data:', error);
+               rowData.innerHTML="<h1 class='text-danger fw-bold'>Letter is Invalid</h1>"
+
     }
     finally {
         document.getElementById("spinner").classList.add("d-none");
