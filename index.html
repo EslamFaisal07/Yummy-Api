@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="icon" href="images/logo.png">
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<div id="spinner" class="loading d-none position-fixed top-0 start-0 end-0 bottom-0 d-flex justify-content-center  align-items-center">
+    <span class="loader"></span>
+</div>
+
+
+<div id="sideBar" class="bg-danger  d-flex">
+    <div class="leftNav  bg-black" id="leftNav">
+        <div class="side-links d-flex flex-column py-4 overflow-hidden">
+            <a href="" id="search" class="text-decoration-none text-white    py-2">Search</a>
+            <a href="" id="Categories" class="text-decoration-none text-white    py-2">Categories</a>
+            <a href="" id="area" class="text-decoration-none text-white    py-2">Area</a>
+            <a href="" id="Ingredients" class="text-decoration-none text-white    py-2">Ingredients</a>
+            <a href="" id="contact" class="text-decoration-none text-white   py-2">Contact Us</a>
+        </div>
+        <div class="left-footer  text-white">
+            <div class="icons text-white">
+
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <p>Copyright Â© 2019 All<br> Rights Reserved.</p>
+        </div>
+    </div>
+    <div class="rightNav bg-white d-flex flex-column justify-content-between align-items-center">
+        <img src="images/logo.png" class="w-100 mt-3" alt="">
+        <i class="fa-solid fa-xmark  " id="close"></i>
+        <i class="fa-solid fa-bars d-none  bar" id="bar"></i>
+        <div class="footer d-flex flex-column py-3">
+            <i class="fa-solid fa-globe mb-3"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row g-4 py-5" id="searchContainer">
+
+    </div>
+</div>
+
+
+
+    <div class="container py-5">
+        <div class="row g-4" id="rowData">
+           
+        </div>
+    </div>
+
+
+
+
+
+
+    
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

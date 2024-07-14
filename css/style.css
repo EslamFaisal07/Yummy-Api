@@ -1,0 +1,145 @@
+body{
+    background-color: black;
+}
+.img-hov{
+overflow: hidden;
+}
+.img-hov:hover .layer-img {
+top: 0;
+}
+.layer-img{
+transition: all 0.8s;
+    background-color: rgba(255, 255, 255, 0.8);
+    top:100% ;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+#sideBar{
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  /* transition:  left 0.5s ease; */
+  
+}
+.rightNav{
+  width: 75px;
+}
+.leftNav{
+  padding-left: 30px;
+  padding-right: 30px;
+  /* transition: left 0.5s ease; */
+ 
+}
+.left-footer{
+  padding-top: 500px;
+}
+
+#submit{
+  width: 10%;
+}
+
+::-webkit-input-placeholder
+{
+  color: #eceaea !important;
+  font-size: small;
+}
+
+#areaIcon{
+  font-size: 60px;
+}
+
+.fa-drumstick-bite{
+  font-size: 60px;
+
+}
+
+#close{
+    font-size: 40px;
+
+}
+.bar{
+    font-size: 40px;
+}
+.loading{
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 120;
+}
+
+
+.loader {
+    color: #fff;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    animation: mulShdSpin 1.3s infinite linear;
+    transform: translateZ(0);
+  }
+  
+  @keyframes mulShdSpin {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 
+      2em -2em 0 0em, 3em 0 0 -1em, 
+      2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+      3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 
+      2em -2em 0 0, 3em 0 0 0.2em, 
+      2em 2em 0 0, 0 3em 0 -1em, 
+      -2em 2em 0 -1em, -3em 0 0 -1em, 
+      -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+       -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+       -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+       3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+       -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+      3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+      3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+      -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+  }
+    
+
+
+
+  .side-links a {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.side-links a.animate__bounceInUp {
+    opacity: 1;
+}
