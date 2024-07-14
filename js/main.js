@@ -663,6 +663,7 @@ function displayContact() {
         <button id="submitBtn" disabled class="btn btn-outline-danger px-2 mt-3" onclick="handleSubmit(event)">Submit</button>
     </div>
 </div>`;
+    searchContainer.innerHTML=""
 }
 
 
