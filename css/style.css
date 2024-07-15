@@ -16,7 +16,13 @@ transition: all 0.8s;
     left: 0;
 
 }
-
+.icon-share{
+  font-size: 15px;
+}
+#shareIcon{
+  cursor: pointer;
+  font-size: 20px;
+}
 #sideBar{
   z-index: 99;
   position: fixed;
