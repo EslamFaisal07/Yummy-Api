@@ -1,5 +1,72 @@
 /// <reference types="../@types/jquery" />
 
+
+
+
+
+
+
+
+
+const shareIcon = document.getElementById("shareIcon")
+
+
+
+
+
+shareIcon.addEventListener('click', async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: ' Yummy Food',
+                text: 'Website have all food ',
+                url: window.location.href
+            });
+           
+        } catch (error) {
+           
+        }
+    } else {
+        const subject = 'اكتشف هذا الموقع';
+        const body = `  Visit this website : ${window.location.href}`;
+        const mailtoUrl = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const rightNav = document.querySelector('.rightNav');
+
+    document.addEventListener('mousemove', function(event) {
+        if (window.innerWidth <= 768) {
+            const mouseX = event.clientX;
+
+            if (mouseX <= 70) {
+                rightNav.style.transform = 'translateX(-3px)';
+                rightNav.style.transition = 'transform 0.3s ease';
+            } else {
+                rightNav.style.transform = 'translateX(-74.562px)';
+                rightNav.style.transition = 'transform 0.3s ease';
+            }
+        }
+        if (window.innerWidth > 768){
+            rightNav.style.transform = 'translateX(0px)';
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function() {
     $("#leftNav").addClass("d-none");
     $("#bar").removeClass("d-none");
