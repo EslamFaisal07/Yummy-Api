@@ -2,18 +2,7 @@
 
 
 
-
-
-
-
-
-
 const shareIcon = document.getElementById("shareIcon")
-
-
-
-
-
 shareIcon.addEventListener('click', async () => {
     if (navigator.share) {
         try {
@@ -55,15 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-
-
-
-
-
-
-
 
 
 
